@@ -29,3 +29,27 @@ if $CALCULATOR 3 @ 2; then  # If the return code of $PROGRAM is zero (i.e. succe
   echo 'ERROR! An invalid run of the application (3 @ 2) apparently succeeded?!'
   exit 1
 fi
+
+# My additional tests
+
+# Test 04: Ensure the program runs without error with a simple, valid invocation. (subtraction)
+if ! $CALCULATOR 2 - 6; then  # If the return code of $PROGRAM is non-zero (i.e. error)...
+  echo 'ERROR! A valid run of the calculator (2 - 6) failed!'
+  exit 1
+fi
+
+#additional tests
+# Test 05: Ensure the program runs without error with a simple, valid invocation. (division)
+if ! $CALCULATOR 6 / 2; then  # If the return code of $PROGRAM is non-zero (i.e. error)...
+  echo 'ERROR! A valid run of the calculator (6 / 2) failed!'
+  exit 1
+fi
+
+#additional tests
+# Test 04: Ensure the program runs without error with a simple, valid invocation. (multiplication)
+if ! $CALCULATOR 2 * 6; then  # If the return code of $PROGRAM is non-zero (i.e. error)...
+  echo 'ERROR! A valid run of the calculator (2 '*' 6) failed!'
+  exit 1
+fi
+
+
